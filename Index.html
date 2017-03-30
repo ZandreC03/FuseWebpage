@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html xmlns="http://www.fuseuniversal.com/1999/xhtml">
+
+<head>
+    <!-- META DATA -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Fuse Universal | Learn More. Perform Better.</title>
+	<meta name="author" content="Fuse Universal" />
+	<meta name="description" content="Changing the way the world learns" />
+	<meta name="keywords"  content="mobile learning,video learning,lms,comms,platform,elearning,compliance" />
+	<meta name="Resource-type" content="Document" />
+  	<meta name="viewport" content="initial-scale=1.0,width=device-width" />
+    <!-- FULLPAGE JS SCRIPTS -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.css" />
+<script
+  src="https://code.jquery.com/jquery-2.2.2.min.js"
+  integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/vendors/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
+<script>
+if (window.location.href == 'http://fuse.fuseuniversal.com/' || window.location.href == 'http://fuse.fusion-universal.com/') {
+		function Redirect() {
+			window.location='https://fuse.fuseuniversal.com/'
+		}
+	}
+
+</script>
+
+	<!-- STYLES -->
+	<link href="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/css/styles.css" rel="stylesheet" type="text/css">
+   	<link href="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/css/mobile.css" rel="stylesheet" type="text/css">
+   	<!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> 	
+    <!-- GOOGLE ANALYTICS -->
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  		ga('create', 'UA-87435331-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+	<!-- HUBSPOT -->
+		<!-- Start of Async HubSpot Analytics Code -->
+  	<script type="text/javascript">
+    	(function(d,s,i,r) {
+      	if (d.getElementById(i)){return;}
+      	var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      	n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2038543.js';
+      	e.parentNode.insertBefore(n, e);
+    	})(document,"script","hs-analytics",300000);
+  	</script>
+		<!-- End of Async HubSpot Analytics Code -->
+	<!-- CUSTOM SCRIPTS -->
+	<script>
+//variables
+var sloganCount = 0;
+var menuOpen = false;
+
+//Document Ready
+$(document).ready(function(){
+	
+//Remove All elements if Password forgotten is in url
+if (window.location.href.indexOf("users/password/new") >= 0) {
+        $("#fullpage").hide();
+		$(".menu-icon").hide();
+		$("ul.nav.navbar-nav").hide();
+		$(".action-section").hide();
+		$("video").hide();
+	   // $("body").css();
+		$("body").css("background-size", "cover");
+		$(".reset-password-div").css("margin", "100px 20px");
+      }
+if (window.location.href.indexOf("password/edit") >= 0 || window.location.href.indexOf("users/password") >= 0 ) {
+        $("#fullpage").hide();
+		$(".menu-icon").hide();
+		$("ul.nav.navbar-nav").hide();
+		$(".action-section").hide();
+		$("video").hide();
+	   // $("body").css("");
+		$("body").css("background-size", "cover");
+		$(".reset-password-div").css("margin", "100px 20px");
+}
+//-----------
+$(".loader").fadeOut('slow');
+ $(".overlay").click(function(){
+	$('#myVideo').attr('src', '');
+ 	$(".overlay").fadeOut(); //When clicking on overlay close video popup
+	return false;
+ });
+	
+ $(".menu-icon").click(function(){
+ 	toggleMenu(); //Opens mobile dropdown
+	return false;
+ });
+	
+ $("#seventy").hover(function(){
+	$("#content-pillar-title").fadeOut('fast',function() {
+		$("#content-pillar-title").html("User Generated Content");
+		$("#content-pillar-title").fadeIn();
+	});
+ 	
+	return false;
+ });
+	
+ $("#twenty").hover(function(){
+	$("#content-pillar-title").fadeOut('fast',function() {
+ 		$("#content-pillar-title").html("Facilitated Content");
+		$("#content-pillar-title").fadeIn();
+	});
+	 
+	return false;
+ });
+
+ $("#ten").hover(function(){
+	$("#content-pillar-title").fadeOut('fast',function() {
+ 		$("#content-pillar-title").html("Fuse Expert Content");
+		$("#content-pillar-title").fadeIn();
+	});
+	 
+	return false;
+ });
+	
+ $("#content-nav li").click(function() {
+		$("#content-nav li").removeClass("active");
+		$(this).addClass("active");
+ });
+	
+ $("#seventy").click(function(){
+	$("#ten-box").hide();
+	$("#twenty-box").hide();
+	$("#seventy-box").show();
+	$("#section9").css("background-image","url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/user.jpg)");
+	$.fn.fullpage.moveTo(10, 0);
+ });		
+
+ $("#twenty").click(function(){
+	$("#ten-box").hide();
+	$("#seventy-box").hide();
+	$("#twenty-box").show();
+	$("#section9").css("background-image","url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/facilitated.jpg)");
+	$.fn.fullpage.moveTo(10, 0);
+ });	
+
+ $("#ten").click(function(){
+	$("#twenty-box").hide();
+	$("#ten-box").show();
+	$("#seventy-box").hide();
+	$("#section9").css("background-image","url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/expert.jpg)");
+	$.fn.fullpage.moveTo(10, 0);
+ });	
+
+ Initiate (); //Run Start Functions
+
+});
+
+
+//Start functions
+function Initiate () {
+	var iOS = false,
+  		p = navigator.platform;
+  		if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ) {
+     		$("video").hide();
+  		}
+	$(".overlay").hide();
+	$('.features-carousel li').fadeOut();
+	$(".mobile-menu").hide();
+	$("#seventy-box").show();
+	$("#ten-box").hide();
+	$("#twenty-box").hide();
+	
+}
+
+function clientsChangeContent() {
+	$('.clients-carousel li').hide();
+	$('.clients-carousel').append($('.clients-carousel li:nth-child(-n+4)'));
+	$('.clients-carousel li:nth-child(-n+4)').fadeIn('slow');
+}
+
+
+//Video popup function
+function VideoPopup (videoId) {
+	var url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+ 	$('#myVideo').attr('src', url);
+    $(".overlay").fadeIn();
+}
+
+
+//1.2s Animation interval
+window.setInterval(function(){
+	if (window.location.href.indexOf("#landing-page") >= 0) {
+  		$(".navigation-box").fadeTo(600, 0.4,function(){
+  			$(".navigation-box").fadeTo(600, 1);
+  		});
+	}
+}, 1200); 
+
+
+
+//2.2s Animation interval
+window.setInterval(function(){
+
+  if (sloganCount === 0) {
+	  $("#slogan").fadeOut('fast',function(){
+		    $("#slogan").html('Learning');
+			$("#slogan").fadeIn();
+			sloganCount = 1;
+		});
+
+  }
+  if (sloganCount === 1) {
+	  $("#slogan").fadeOut('fast',function(){
+		    $("#slogan").html('Collaboration');
+			$("#slogan").fadeIn();
+			sloganCount = 2;
+		});
+
+  }
+
+  if (sloganCount === 2) {
+	  $("#slogan").fadeOut('fast',function(){
+		    $("#slogan").html('Performance');
+			$("#slogan").fadeIn();
+			sloganCount = 0;
+		});
+  }
+	
+	clientsChangeContent();
+	
+}, 2200); 
+	
+
+function toggleMenu () {
+	if (!menuOpen) {
+		$(".mobile-menu").show();
+		$(".container-fluid").css("background","#fff");
+		$(".mobile-menu").animate({right: '0px'});
+		menuOpen = true;
+	}
+	else {
+		$(".container-fluid").css("background","none");
+		$(".mobile-menu").animate({right: '100%'});
+		$(".mobile-menu").hide();
+		menuOpen = false;
+	}
+}
+
+
+</script>
+	<!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- FULLPAGE JS INITIALISATION -->
+	<script>
+	$(document).ready(function() {
+    $('#fullpage').fullpage({
+        //Navigation
+        menu: '#menu',
+        lockAnchors: false,
+        anchors: ['landing-page', 'transform', 'stories-vodafone', 'stories-dixons', 'platform', 'features', 'content-services', 'content-breakdown','content-facilities','contactus'],
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['landing-page', 'transform', 'stories-vodafone', 'stories-dixons', 'platform', 'features', 'content-services', 'content-breakdown','content-facilities','contactus'],
+        showActiveTooltip: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: null,
+        scrollOverflow: null,
+        scrollOverflowOptions: null,
+        touchSensitivity: 10,
+        normalScrollElementTouchThreshold: 5,
+        bigSectionsDestination: null,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        controlArrows: false,
+        verticalCentered: true,
+        sectionsColor: ['rgba(0,0,0,0.5)', 'rgb(253, 251, 253)', '#fefefe', '#fff', 'rgba(255,255,255,0.95)', '#fff','rgba(255,255,255,0.95)', '#fff', '#fff', '#fff'],
+        paddingTop: '3em',
+        paddingBottom: '10px',
+        fixedElements: '#header, .footer',
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+        responsiveSlides: false,
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        //events
+        onLeave: function(index, nextIndex, direction){
+			//THIS HAS BEEN DISABLED BUT MIGHT BE ADDED AGAIN
+			//$("#section"+nextIndex+" div").fadeIn('slow');
+			//$("#section"+index+" div").fadeOut('fast');
+			// ARRIVE
+			if (nextIndex === 3) {
+				$("img.jon-image").removeClass("jon-image-init");
+			}
+			if (nextIndex === 4) {
+				$("img.rhys-image").removeClass("rhys-image-init");
+			}
+			//THIS HAS BEEN DISABLED BUT MIGHT BE ADDED AGAIN
+			//if (nextIndex === 6) {
+			//	$("img.rentokil-image").removeClass("rentokil-image-init");
+			//}
+			if (nextIndex === 5) {
+				$(".screen-images").delay(600).removeClass("screen-init");
+			}
+			if (nextIndex === 7) {
+				$(".expand-content").hide();
+			}
+			// LEAVE
+			if (index === 3) {
+				$("img.jon-image").addClass("jon-image-init");
+			}
+			if (index === 4) {
+				$("img.rhys-image").addClass("rhys-image-init");
+			}
+			//THIS HAS BEEN DISABLED BUT MIGHT BE ADDED AGAIN
+			//if (index === 6) {
+			//	$("img.rentokil-image").addClass("rentokil-image-init");
+			//}
+			if (index === 5) {
+				$(".screen-images").addClass("screen-init");
+			}
+		},
+        afterLoad: function(anchorLink, index){ 	
+			$(".loader").fadeOut('fast');	   
+			$('[data-toggle="tooltip"]').tooltip();
+		},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterResponsive: function(isResponsive){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+		},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    	});
+	});
+	</script>
+    <script type="text/javascript"> // RELOADS WEBPAGE WHEN MOBILE ORIENTATION CHANGES  
+    window.onorientationchange = function() { 
+        var orientation = window.orientation; 
+            switch(orientation) { 
+                case 0:
+                case 90:
+                case -90: window.location.reload(); 
+                break; } 
+    };
+	</script>
+</head>
+<body>
+<!-- Modal -->
+  <div class="modal fade" id="myLoginModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"> 
+          <h3 class="modal-title" style="float: left">Login</h3>
+          <i class="fa fa-times-circle fa-2x" aria-hidden="true" data-dismiss="modal" style="color:#ccc;float: right;margin: 0;"></i>
+        </div>
+        <div class="modal-body">
+        %{login_form}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Modal -->
+  <div class="modal fade" id="myRequestModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"> 
+          <h3 class="modal-title" style="float: left">Request a Demo</h3>
+          <i class="fa fa-times-circle fa-2x" aria-hidden="true" data-dismiss="modal" style="color:#ccc;float: right;margin: 0;"></i>
+        </div>
+        <div class="modal-body">
+          <!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({ 
+    css: '',
+    portalId: '2038543',
+    formId: '2c30e092-482e-44b4-aa8c-30d475c99beb'
+  });
+</script>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Modal -->
+  <div class="modal fade" id="mySubscribeModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"> 
+          <h3 class="modal-title" style="float: left">Subscribe</h3>
+          <i class="fa fa-times-circle fa-2x" aria-hidden="true" data-dismiss="modal" style="color:#ccc;float: right;margin: 0;"></i>
+        </div>
+        <div class="modal-body">
+        
+<!-- HUBSPOT LINK -->
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({ 
+    portalId: '2038543',
+    formId: '435e87f5-80c2-4810-9ff3-132f03789ff5'
+  });
+</script>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<!-- LOADER SCREEN -->
+<div class="loader">
+	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/loading.gif" class="loader-image">
+</div>
+<video poster="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/placeholder.png" id="bgvid" playsinline autoplay muted loop>
+	<source src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/video/landing_page_vid.mp4" type="video/mp4">
+</video>
+<!-- NAV BAR -->
+<nav class="navbar" style="z-index:80;margin-bottom:0; width: 100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://fuse.fuseuniversal.com"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/logo.png" alt="fuselogo" class="menu-logo"></a>
+    </div>
+    <ul class="nav navbar-nav hidden-xs hidden-sm" style="font-size: 11.5px !important">
+      <li><a href="#stories-vodafone" id="customer-stories">Customer Stories</a></li>
+      <li><a href="#platform" id="menu-platform">Platform</a></li>
+      <li><a href="#content-services" id="content">Content Services</a></li>
+      <li><a href="http://www.fuseschool.org" id="fuseschool">Fuse School</a></li>
+      <li><a href="#contactus" id="contact">Contact us</a></li>
+    </ul>
+    <div class="action-section hidden-xs hidden-sm">
+   <button class="borderless-button" data-toggle="modal" data-target="#mySubscribeModal"><span class="glyphicon glyphicon-gift icons"></span> <span class="borderless-text">Subscribe</span></button>
+<button type="button" data-toggle="modal" data-target="#myLoginModal" class="borderless-button"><span class="glyphicon glyphicon-lock icons"></span> <span class="borderless-text">Login</span></button>
+    <button type="button" data-toggle="modal" data-target="#myRequestModal">Request Demo</button>
+    </div>
+    <i class="fa fa-bars fa-2x menu-icon hidden-md hidden-lg" aria-hidden="true"></i>
+  </div>
+  <ul class="mobile-menu">
+  	  <li><h1 class="text-block" style="margin-bottom:20px;">Menu</h1></li>
+	  <li class="button-mobile" data-toggle="modal" data-target="#mySubscribeModal" onClick="toggleMenu();"><i class="fa fa-pencil mobile-icon" aria-hidden="true"></i><p>Subscribe</p></li>
+	  <li class="button-mobile" data-toggle="modal" data-target="#myLoginModal" onClick="toggleMenu();"><i class="fa fa-unlock-alt mobile-icon" aria-hidden="true"></i><p>Log In</p></li>
+	  <li class="button-mobile" data-toggle="modal" data-target="#myRequestModal" onClick="toggleMenu();"><i class="fa fa-rocket mobile-icon" aria-hidden="true"></i><p>Demo</p></li>
+  	  <li onClick="$.fn.fullpage.moveTo(3, 0);toggleMenu(); ">Customer Stories</li>
+      <li onClick="$.fn.fullpage.moveTo(7, 0);toggleMenu(); ">Platform </li>
+      <li onClick="$.fn.fullpage.moveTo(9, 0);toggleMenu(); ">Content Services</li>
+      <li><a href="http://www.fuseuniversal.com/blog">Blog</a></li>
+      <li onClick="$.fn.fullpage.moveTo(12, 0);toggleMenu(); ">Contact us</li>
+      <li>		  <a href="https://www.facebook.com/Fuseuniversal" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+		  <a href="https://twitter.com/Fuseuniversal" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+		  <a href="https://www.linkedin.com/company/fuseuniversal" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+		  <a href="https://www.youtube.com/user/FusionUniversal" target="_blank"><i class="fa fa-youtube-square fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+	  </li>
+  </ul>
+</nav>
+<!-- FULLPAGE BODY -->
+<div class="reset-password-div">
+        %{page_content}
+</div>
+<div id="fullpage">
+    <div class="section" id="section1">
+    <!-- LANDING PAGE -->
+		<h1 style="color:#fff !important; margin: 0;">The future of </h1>
+		<h1 style="color:#ed1e79 !important; margin: 0;" id="slogan">Collaboration</h1>
+		<h4 style="color:#fff">Revolutionising the way the world learns</h4>
+        <button type="submit" onClick="VideoPopup('QyKc6Blf_R4')">Our Story</button>
+        <button type="submit" onClick="VideoPopup('MPnENqchVDk')" class="secondary-button">Customer Story</button>
+      <div class="social-box">
+		  <a href="https://www.facebook.com/Fuseuniversal" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+		  <a href="https://twitter.com/Fuseuniversal" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+		  <a href="https://www.linkedin.com/company/fuseuniversal" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+		  <a href="https://www.youtube.com/user/FusionUniversal" target="_blank"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a>
+        </div>
+        <div class="navigation-box">
+       		<p style="color:#fff">Learn More</p>
+        	<i class="fa fa-chevron-down fa-lg learn-more-icon" aria-hidden="true" onClick="$.fn.fullpage.moveSectionDown();"></i>
+        </div>
+    </div>
+    <div class="section" id="section2">
+		<div class="col-lg-4 col-md-4 col-sm-3"></div>
+    	<div class="col-lg-4 col-md-4 col-sm-5">
+    	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/intro.gif" alt="transform-image" style="height: 260px; margin: -30px;">
+		<h1>Transform your Organisation</h1>
+		<p style="padding: 0 30px 0 30px;">Our vision is to enable progressive learning organisations across the world to transform themselves into true learning organisations as our leading customers already have.</p>
+<a href="https://fuse.fuseuniversal.com/communities/2086"><button>Experience Fuse</button></a>
+		</div>
+		<!-- <img src="images/steve.png" alt="SteveDineen" class="steve-image"> -->
+	</div>
+    <!--
+     <div class="section" id="section3">
+       	<h3 class="text-block">What's your focus?</h3>
+		<p class="text-block text-body hidden-xs">Explore our specialities and our customers stories by visiting our communities below</p>
+            <div class="vision-icon-box">
+            	<div class="vision-icon-combo">
+					<a href="https://fuse.fuseuniversal.com/communities/3100" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/social.svg" class="vision-icon social-learning large-icon" alt="social learning"></a>
+                	<p>Social Learning</p>
+                </div>
+                <div class="vision-icon-combo">
+					<a href="https://fuse.fuseuniversal.com/communities/3020"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/mobile.svg" class="vision-icon mobile-learning large-icon" alt="mobile learning"></a>
+                	<p>Mobile Learning</p>
+                </div>
+                <div class="vision-icon-combo">
+					<a href="https://fuse.fuseuniversal.com/communities/3038"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/702010.svg" class="vision-icon 702010-learning large-icon" alt="702010 learning"></a>
+                	<p>702010 Learning</p>
+                </div>
+                <div class="vision-icon-combo">
+					<a href="https://fuse.fuseuniversal.com/communities/3101" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/blended.svg" class="vision-icon blended-learning large-icon" alt="Blended learning"></a>
+                	<p>Blended Learning</p>
+                </div>
+                <div class="vision-icon-combo">
+					<a href="https://fuse.fuseuniversal.com/communities/3102" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/video.svg" class="vision-icon video-learning large-icon" alt="video learning"></a>
+                	<p>Video Learning</p>
+                </div>
+                <div class="vision-icon-combo">
+					<a href="https://fuse.fuseuniversal.com/communities/3103" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/comms.svg" class="vision-icon comms-platform large-icon" alt="comms platform"></a>
+					<p>Comms Platform</p>
+                </div>
+                <div class="vision-icon-combo">	
+					<a href="https://fuse.fuseuniversal.com/communities/3104" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/lms.svg" class="vision-icon lms large-icon" alt="lms"></a>
+                	<p>LMS</p>
+                </div>
+            </div> 
+            <ol class="clients-carousel hidden-xs">
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-coop.png" alt="coop-logo">
+				</li>
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-pa.png" alt="pa-logo">
+				</li>
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-hilti.png" alt="spotify-logo">
+				</li>
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-ihg.png" alt="vistage-logo">
+				</li>
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-lindt.png" alt="vodafone-logo">
+				</li>
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-npower.png" alt="vodafone-logo">
+				</li>
+				<li>
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/clients/client-pizzahut.png" alt="vodafone-logo">
+				</li>
+			</ol>
+		<p class="text-block text-body hidden-xs">To learn more about how Fuse's platform and methodologies helped transform our clients. Check out our blog.</p>
+        <a href="http://www.fuseuniversal.com/blog" class="hidden-xs"><button type="submit" onClick="hre" >Visit Blog</button></a>
+   </div> -->
+    <div class="section" id="section4">
+    	<div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></div>
+    		<div class="col-lg-5 col-md-5 col-sm-5 client-body" style="text-align: left;">
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/vodafone-logo.png" style="margin-left:-10px">
+        <h3 class="text-block">How Vodafone transformed their learning culture</h3>
+		<p class="text-block" style="margin-left:0;">Implementation of a mobile first learning solution accessible to all retail colleagues, with recent expansion to customer operations and field engineers.</p>
+        <p class="text-block hidden-xs" style="margin-left:0;">Vodafone now utilise Fuse as their single platform for mobile, social and programme learning and as an internal communications and quality assurance platform.</p>
+        <a href="https://fuse.fuseuniversal.com/communities/3/contents/80253"><button type="submit">Learn More</button></a>
+        <button type="submit" onClick="VideoPopup('MPnENqchVDk')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+            <a href="#focus" style="text-decoration: none"><div class="vision-icon-box">
+        		<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/social.svg" class="vision-icon social-learning" alt="social learning" data-toggle="tooltip" title="Social Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/mobile.svg" class="vision-icon mobile-learning" alt="mobile learning" data-toggle="tooltip" title="Mobile Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/702010.svg" class="vision-icon 702010-learning" alt="702010 learning" data-toggle="tooltip" title="702010 Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/blended.svg" class="vision-icon blended-learning" alt="blended-learning" data-toggle="tooltip" title="Blended Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/video.svg" class="vision-icon video-learning" alt="video learning" data-toggle="tooltip" title="Video Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/comms.svg" class="vision-icon comms-platform" alt="comms platform" data-toggle="tooltip" title="Comms Platform">
+			</div></a>
+            </div>
+    		<div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="client-secondary-image hidden-xs" style="background-image:url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/vodafone-secondary.jpg)">
+            	<div class="quote-box">
+            		<i class="fa fa-quote-left fa-3x left-quote" aria-hidden="true"></i>
+                	<h2>Unprecedented growth in learner engagement</h2>
+					<i class="fa fa-quote-right fa-3x right-quote" aria-hidden="true"></i>
+				</div>
+            </div>         
+            </div>
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/jon shaw.png" alt="JonShaw" class="jon-image jon-image-init">  
+        </div>
+    </div>
+    <div class="section" id="section5">
+    	<div class="row">
+     		<div class="col-lg-6 col-md-6">
+            <div class="client-secondary-image hidden-xs" style="background-image:url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/dixons-secondary.jpg)">
+            	<div class="quote-box" style="float: right;">
+            		<i class="fa fa-quote-left fa-3x left-quote" aria-hidden="true"></i>
+                	<h2>We replaced our existing LMS with Fuse and got great feedback! Now we’re ready to move to mobile.</h2>
+					<i class="fa fa-quote-right fa-3x right-quote" aria-hidden="true"></i>
+				</div>
+            </div>         
+            </div>
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/rhys giles.png" alt="RhysGiles" class="rhys-image rhys-image-init"> 
+            <div class="col-lg-1 col-md-1 hidden-xs"></div>
+    		<div class="col-lg-5 col-md-5 client-body" style="text-align: left;">
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/dixons-logo.png" style="margin-left:-10px">
+        <h3 class="text-block">How to get learning into the core of the business</h3>
+        <p class="text-block" style="margin-left:0;">Rhys Giles, Learning Technologies manager explains how Dixons Carphone have created a social and micro learning culture. ‘We recently introduced the Fuse social learning platform in our Dixons Carphone business.</p>
+		<p class="text-block hidden-xs" style="margin-left:0;"> We chose it because social is integral to the experience, its built in at the heart of every feature and not a “bolted-on” afterthought. We have moved from the more traditional platform and content models to a microlearning approach wrapped in social learning.’</p>
+        <a href="https://fuse.fuseuniversal.com/communities/1813/contents/77899"><button type="submit">Learn More</button></a>
+        <button type="submit" onClick="VideoPopup('QwdMr_0VC3U')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+            <a href="#focus" style="text-decoration: none"><div class="vision-icon-box">
+        		<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/social.svg" class="vision-icon social-learning" alt="social learning" data-toggle="tooltip" title="Social Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/mobile.svg" class="vision-icon mobile-learning" alt="mobile learning" data-toggle="tooltip" title="Mobile Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/702010.svg" class="vision-icon 702010-learning" alt="702010 learning" data-toggle="tooltip" title="702010 Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/video.svg" class="vision-icon video-learning" alt="video learning" data-toggle="tooltip" title="Video Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/lms.svg" class="vision-icon lms" alt="lms" data-toggle="tooltip" title="LMS">
+			</div></a>
+            </div> 
+        </div>
+    </div>
+    <!-- <div class="section" id="section6">
+    	 <div class="row">
+            <div class="col-lg-1 col-md-1 hidden-xs"></div>
+    		<div class="col-lg-4 col-md-4 client-body" style="text-align: left;">
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/rentokil-logo.png" style="margin-left:-10px">
+        <h3 class="text-block">Rentokil Initial Turns Off The Market Leading LMS for Fuse</h3>
+		<p class="text-block" style="margin-left:0;">Rentokil Initial moves 30,000 users to Fuse from the market leading LMS. The results are staggering.</p>
+       <p class="text-block hidden-xs" style="margin-left:0;">Richard Gregory explains how he witnessed more engagement with the Fuse platform in 1 month than in 3 years using the previous LMS.</p>
+        <a href="https://fuse.fuseuniversal.com/communities/3/contents/67590"><button type="submit">Learn More</button></a>
+        <button type="submit" onClick="VideoPopup('wWuRQKc9SAU')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+            <a href="#focus" style="text-decoration: none"><div class="vision-icon-box">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/mobile.svg" class="vision-icon mobile-learning" alt="mobile learning" data-toggle="tooltip" title="Mobile Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/702010.svg" class="vision-icon 702010-learning" alt="702010 learning" data-toggle="tooltip" title="702010 Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/blended.svg" class="vision-icon blended-learning" alt="blended-learning" data-toggle="tooltip" title="Blended Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/video.svg" class="vision-icon video-learning" alt="video learning" data-toggle="tooltip" title="Video Learning">
+            	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/lms.svg" class="vision-icon lms" alt="lms" data-toggle="tooltip" title="LMS">
+			</div></a>
+            </div>
+    		<div class="col-lg-6 col-md-6">
+            <div class="client-secondary-image hidden-xs" style="background-image:url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/rentokil-secondary.jpg)">
+            	<div class="quote-box">
+            		<i class="fa fa-quote-left fa-3x left-quote" aria-hidden="true"></i>
+                	<h2>Completely different than anything out there on the market, truly captured the essence of what we wanted to do</h2>
+					<i class="fa fa-quote-right fa-3x right-quote" aria-hidden="true"></i>
+				</div>
+            </div>         
+            </div>
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/rentokill.png" alt="rentokil-employee" class="rentokil-image rentokil-image-init">  
+        </div>
+	</div>    -->
+ 
+   <div class="section" id="section7">
+   		<h1 class="platform-title">Technology is no longer a barrier to our imagination</h1>
+		<p class="platform-text">Market leading technologies available on both mobile and desktop</p>
+        <a href="#features"><button style="
+    margin-bottom: 100px !Important;">Learn More</button></a>    
+        <div class="screen-images screen-init">
+        	<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/tablet.png" alt="tablet image" id="tablet-image">
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/screen.png" alt="screen image" id="screen-image">
+            <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/phone.png" alt="phone image" id="phone-image">
+        </div>
+    </div>
+    <div class="section" id="section8">
+        <div class="slide">
+        	<div class="row">
+       				<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     				<div class="col-lg-5 col-md-5">
+						<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/engagement.png" alt="changing" style="width: 68%; transform: scale(1.2);position: relative;bottom: 33px">       
+            		</div>
+    				<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            			<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        				<h3 class="platform-title">Usability measured by engagement levels</h3>
+						<p class="platform-text" style="margin-left:0;">When a client moves to Fuse from any other learning system such as Saba, Cornerstone or Moodle, they see an immediate increase in user engagement in terms of log ins, views and clicks. In fact, on average learners in Fuse are 50 times more engaged than using a traditional learning management system.</p>
+        				<div class="carousel-buttons">
+        					<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        					<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           				</div>
+            		</div> 
+        	</div>
+        </div>
+    	<div class="slide">
+          	<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     			<div class="col-lg-5 col-md-5">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/content.png" alt="changing" style="width: 65%; transform: scale(1.2);">       
+            	</div>
+    			<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        			<h3 class="platform-title">Content and media management system</h3>
+					<p class="platform-text" style="margin-left:0;">Fuse is the only learning platform built upon a content management system. This enables the ability to create and curate bespoke learning experiences; simple drag and drop design to display content from inside and outside of Fuse; interactive transcription and translation and rich recording functionality. Our unique approach to video allows Fuse to cater for multiple learning styles. The ability to search for text within any piece of a content brings with it a whole new learning experience.</p>
+        			<div class="carousel-buttons">
+        				<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        				<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           			</div>
+            	</div> 
+        	</div>
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     			<div class="col-lg-5 col-md-5">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/learning.png" alt="changing" style="width: 60%; transform: scale(1.3);    position: relative;bottom: 33px;">
+            	</div>
+    			<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        			<h3 class="platform-title">Flexible curation of learning experiences</h3>
+					<p class="platform-text" style="margin-left:0;">As a content management system first, Fuse is completely customisable to your audience at  both a site and community level. This allows users to see what is relevant for them and for administrators to have control over brand look and feel.</p>
+        			<div class="carousel-buttons">
+        						<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        			<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           			</div>
+            	</div> 
+        	</div>	
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     				<div class="col-lg-5 col-md-5">
+						<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/analytics.png" alt="changing" style="width: 60%;transform: scale(1.2);">       
+            		</div>
+    				<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            			<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        				<h3 class="platform-title">New analytics engine and business performance correlation</h3>
+						<p class="platform-text" style="margin-left:0;">Our clients have proven a direct correlation between user engagement and business performance. The Fuse analytics engine enables rich data visualisation through the creation of bespoke, fully customisable dashboards. So from boardroom to front line, every individual will have a view that is tailored for them.</p>
+        				<div class="carousel-buttons">
+        					<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        					<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           				</div>
+            		</div> 
+        	</div>	
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     			<div class="col-lg-5 col-md-5">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/assesments.png" alt="changing" style="width: 50%; transform: scale(1.2);position: relative;bottom: 33px">       
+            	</div>
+    			<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        			<h3 class="platform-title">Standard and advanced formal features all in one system</h3>
+					<p class="platform-text" style="margin-left:0;">Our platform supports any compliance course needs, going hand-in-hand with performance-driven learning.  Administrators have complete control to create highly customizable reports to track and manage the outputs of any structured course.</p>
+        			<div class="carousel-buttons">
+        				<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        				<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           			</div>
+            	</div> 
+        	</div>	
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     			<div class="col-lg-5 col-md-5">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/strategy.png" alt="changing" style="width:40%;transform: scale(1.6);position: relative;bottom: 33px">       
+            	</div>
+    			<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        			<h3 class="platform-title">Organisations content strategy</h3>
+					<p class="platform-text" style="margin-left:0;">We embrace three core elements of content creation: User generated, facilitated and professional quality content. Fuse is the only platform that allows any content type to be directly uploaded to the site through desktop, web app or native app. From a social perspective, content can be accessed in seconds with the ability to like, share and comment within your peer group.</p>
+        			<div class="carousel-buttons">
+        				<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        				<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           			</div>
+            	</div> 
+        	</div>	
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     			<div class="col-lg-5 col-md-5">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/scorm.png" alt="changing" style="width: 70%; transform: scale(1.3);">       
+            	</div>
+    			<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        			<h3 class="platform-title">Modernised alternative to SCORM course</h3>
+					<p class="platform-text" style="margin-left:0;">We’ve pioneered a modern way to deliver learning through bite-sized content whilst also catering for the traditional learning methodology.We enable a transformational journey away from a linear learning approach toward a simple, accessible knowledge system that puts the learner in control of how they learn. This allows organisations to structure their learning according to their needs through the use of videos and content.</p>
+        			<div class="carousel-buttons">
+        				<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        				<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           			</div>
+            	</div> 
+        	</div>	
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-1 col-md-1 hidden-xs"></div>
+     			<div class="col-lg-5 col-md-5">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/instant.png" alt="changing" style="width: 60%; transform: scale(1.2);">       
+            	</div>
+    			<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="platform-title" style="margin-left:0;color:#ed1e79;">P L A T F O R M</p>
+        			<h3 class="platform-title">Instant conversations</h3>
+					<p class="platform-text" style="margin-left:0;">Fuse is the first learning platform to have social conversations embedded into the learning experience. With the introduction of Fuse Chat, all conversations can be continued and accessed within seconds. We believe that this is mission critical to capture both collaborative thinking and more structured 121 conversations within organisations.</p>
+        			<div class="carousel-buttons">
+        				<a href="https://fuse.fuseuniversal.com/communities/3/contents/89695"><button type="submit">Read More</button></a>
+        				<button type="submit" onClick="VideoPopup('VW6gXngtetA')" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button>
+           			</div>
+            	</div> 
+        	</div>	
+    	</div>
+    </div>
+    
+    
+	<div class="section" id="section9">
+		<h1>Social learning at its best</h1>
+		<p>We map our content services to the 70 20 10 model</p>
+		<h3 id="content-pillar-title">User Generated</h3>
+		<div class="col-lg-8 col-lg-push-2" style="height:300px;">
+			<div class="pillar" style="background:url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/user.jpg);background-size:cover;background-position: center;" id="seventy">
+				<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/number_70.svg" class="big-numbers">
+			</div>
+			<div class="pillar" style="background:url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/facilitated.jpg);background-size:cover;background-position: center;" id="twenty">
+				<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/number_20.svg" class="big-numbers">
+			</div>
+			<div class="pillar" style="background:url(https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/expert.jpg);background-size:cover;background-position: center;" id="ten">
+				<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/number_10.svg" class="big-numbers">
+			</div>
+		</div>
+	</div>
+   
+   	<div class="section" id="section10">
+		<h1 style="color:#fff">Content Services</h1>
+    	<div class="row" id="seventy-box">
+			<div class="col-lg-4 col-lg-push-4 col-md-4 col-md-push-4">
+				<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/user_content.png" style="width: 100%;">
+				<h3 style="color:#fff">User Generated Content</h3>
+				<p style="padding: 0px 70px 0px 70px; color:#fff">Fuse is built on a community structure, where each user is placed within the most relevant communities for their job role. This allows learners to socially learn by sharing best practice with their peers. On Fuse, knowledge can be captured and shared instantly through native features within both web and mobile elements of the platform. </p>
+			</div>
+		</div>
+		<div class="row" id="twenty-box">
+			<div class="col-lg-4 col-lg-push-4 col-md-4 col-md-push-4">
+				<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/facilitated-content.png" style="width: 100%;">
+				<h3 style="color:#fff">Facilitated Content</h3>
+				<p style="padding: 0px 70px 0px 70px; color:#fff">Need help transforming your content strategy? Our team of experts will work with you to help transform your material in to rich, bite sized content that is most relevant for your target audience, Once we’ve shown you how, you will be able to create a new breed of content to continue your journey.
+				</p>
+			</div>
+		</div>
+		<div class="row" id="ten-box">
+			<div class="col-lg-4 col-lg-push-4 col-md-4 col-md-push-4">
+				<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/content-image-23.png" style="width: 100%;position: relative;right: 20px;">
+				<h3 style="color:#fff">Expert Fuse Content</h3>
+				<p style="padding: 0px 70px 0px 70px; color:#fff">Fuse has a team of dedicated animators, videographers and designers to create professional grade video content for your audience. We create all types of video including marketing material, online content, events coverage and scenario based deconstructions.</p>
+			</div>
+		</div>
+	</div>
+   
+    <div class="section" id="section11">
+        <div class="slide">
+        	<div class="row">
+       			<div class="col-lg-2 col-md-2"></div>
+       	    	<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="text-block text-body" style="margin-left:0;color:#ed1e79;">C O N T E N T</p>
+        			<h3 class="text-block">Live video</h3>
+					<p class="text-block text-body" style="margin-left:0;">Our video production capabilities enable us to capture truly passionate and emotionally engaging stories from our clients. We create all types of video here at Fuse including marketing material, online content, events coverage and scenario based deconstructions. Rarely working from a script we take a more journalistic approach, interviewing subject matter experts to craft a concise and authentic narrative. We are constantly evolving our approach, leveraging the latest technology to produce new ways for you to tell your story. </p>
+       				<div class="carousel-buttons">
+        				<a href="#"><button type="submit" onClick="href">Read More</button></a>
+        				<a href="#"><button type="submit" onClick="VideoPopup()" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button></a>
+					</div>
+            	</div> 
+     			<div class="col-lg-6 col-md-6">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/camera-23.png" alt="changing" style="width: 26%; transform: scale(3);position: relative;top: 200px;">       
+				</div>
+        	</div>
+        </div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-2 col-md-2"></div>
+       	    	<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="text-block text-body" style="margin-left:0;color:#ed1e79;">C O N T E N T</p>
+        			<h3 class="text-block">Animation</h3>
+					<p class="text-block text-body" style="margin-left:0;">Let our team of onsite animators transform your organisation’s key messages in to clear, on-brand animations to help tell a story.</p>
+       				<div class="carousel-buttons">
+        				<a href="#"><button type="submit" onClick="href">Read More</button></a>
+        				<a href="#"><button type="submit" onClick="VideoPopup()" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button></a>
+					</div>
+            	</div> 
+     			<div class="col-lg-6 col-md-6">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/animation.png" alt="changing" style="width: 40%; transform: scale(2);position: relative;">       
+            	</div>
+        	</div>
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-2 col-md-2"></div>
+       	    	<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="text-block text-body" style="margin-left:0;color:#ed1e79;">C O N T E N T</p>
+        			<h3 class="text-block">Interactive</h3>
+					<p class="text-block text-body" style="margin-left:0;">The future of videos is interactive. Interactive video content creates a far more immersive experience than traditional passive forms of media leading to significantly increased learner engagement. With rich analytics you understand learner interactions enabling you to optimise your message and delivery.</p>
+       				<div class="carousel-buttons">
+        				<a href="#"><button type="submit" onClick="href">Read More</button></a>
+        				<a href="#"><button type="submit" onClick="VideoPopup()" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button></a>
+					</div>
+            	</div> 
+     			<div class="col-lg-6 col-md-6">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/interactive.png" alt="changing" style="width: 40%;transform: scale(2);position: relative;right: 150px;">       
+            	</div>
+        	</div>
+    	</div>
+    	<div class="slide">
+    		<div class="row">
+       			<div class="col-lg-2 col-md-2"></div>
+       	    	<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="text-block text-body" style="margin-left:0;color:#ed1e79;">C O N T E N T</p>
+        			<h3 class="text-block">Deconstruction</h3>
+					<p class="text-block text-body" style="margin-left:0;">Have complex systems or processes to follow? Deconstruction videos are perfect to break down the steps required to complete the journey. Our team will create a combination of live video and animations to support keeping your messaging simple</p>
+       				<div class="carousel-buttons">
+        				<a href="#"><button type="submit" onClick="href">Read More</button></a>
+        				<a href="#"><button type="submit" onClick="VideoPopup()" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button></a>
+					</div>
+            	</div> 
+     			<div class="col-lg-6 col-md-6">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/deconstruction.png" alt="changing" style="width: 40%; transform: scale(2);position: relative;top: 200px;">       
+				</div>
+        	</div>
+    	</div>
+   	    <div class="slide">
+    		<div class="row">
+       			<div class="col-lg-2 col-md-2"></div>
+       	    	<div class="col-lg-4 col-md-4 carousel-content" style="text-align: left;">
+            		<p class="text-block text-body" style="margin-left:0;color:#ed1e79;">C O N T E N T</p>
+        			<h3 class="text-block">Creative Consultancy</h3>
+					<p class="text-block text-body" style="margin-left:0;">Within Fuse we have some of the most creative minds in the learning world and they understand that moving away from conventional learning can be a daunting experience for any organisation. We work with you to nurture and develop your creative thoughts into realistic, achievable, highly engaging deliverables without ever losing sight of the learning objectives your business needs to meet. </p>
+       				<div class="carousel-buttons">
+        				<a href="#"><button type="submit" onClick="href">Read More</button></a>
+        				<a href="#"><button type="submit" onClick="VideoPopup()" class="borderless-button" style="color:#333 !important"><i class="fa fa-play fa-lg" aria-hidden="true" style="color:#333"></i>Watch Video</button></a>
+					</div>
+            	</div> 
+     			<div class="col-lg-6 col-md-6">
+					<img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/camera-23.png" alt="changing" style="width: 40%; transform: scale(2);position: relative;top: 200px;">       
+            	</div>
+        	</div>
+		</div>
+    </div>
+	<div class="section" id="section12">
+		<h1 class="text-block">Like what you see?</h1>
+    	<h3 class="text-block">Contact us, or learn more:</h3>
+		<a href="https://fuse.fuseuniversal.com/communities/2086"><button>Experience Fuse</button></a>
+     	<a href="http://www.fuseuniversal.com/about"><button class="secondary-button">About Us</button></a>
+      	<div class="social-box">
+       	      <div class="social-box">
+		  <a href="https://www.facebook.com/Fuseuniversal/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+		  <a href="https://twitter.com/Fuseuniversal" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+		  <a href="https://www.linkedin.com/company/fuseuniversal" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+		  <a href="https://www.youtube.com/user/FusionUniversal" target="_blank"><i class="fa fa-youtube-square fa-lg" aria-hidden="true" style="color: #333;margin-top: 20px;"></i></a>
+        </div>
+        <h3> Call us at: </h3>
+     	<p> Sales +44 2072473166</p>
+     	<p> Office +44 2074260720</p>
+        </div>
+        <div class="contact-footer">
+			<span><p><a href="https://fuse-universal.workable.com/" style="color:#ed1e79;">Jobs</a> | <a href="http://www.fuseuniversal.com/wp-content/uploads/2014/04/Fusepp0414.pdf" style="color:#ed1e79;">Privacy Policy</a> | <a href="mailto:hello@fuseuniversal.com" style="color:#ed1e79;">hello@fuseuniversal.com</a> | © 2016 Fuse Universal - All Rights Reserved</p></span>
+        </div>
+	</div>
+</div>
+<div class="overlay">
+	<div class="popup">
+	<iframe id="myVideo" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+<style>
+	/* FIXES TO PASSWORD RESET 21/03/17 */
+	.b-sign-up {
+		display: none;
+	}
+	
+	.h-password-requirements {
+    	text-align: left;
+	}
+	.password.required.user_password.field.input.string {
+    	text-align: left;
+	}
+	.password.required.user_password_confirmation.field.input.string {
+    	text-align: left;
+	}
+	.input.actions {
+    	text-align: left;
+	}
+</style>
+</body>
+</html>
