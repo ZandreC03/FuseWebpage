@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+
+@media (max-width: 1160px) {
+	
+	/* CSS Mobile Reset */
+html, body
+{
+ margin: 0;
+ padding: 0; 
+ border: 0;
+}
+
+body 
+{
+ font-family:Arial,  sans-serif;
+ line-height:1.5;
+ font-size:16px;
+ background: #fff;
+ padding:5px;
+ color: #000;
+ word-wrap: break-word;
+ -webkit-text-size-adjust: none;
+}
+
+h1, h2, h3, h4, h5, h6{ font-weight: normal; }
+
+p img { float: left; margin: 0 10px 5px 0; padding: 0; }
+
+img { border: 0; max-width: 100%; }
+
+table { width:auto; border-collapse: collapse;border-spacing: 0; }
+	
+	/* CUSTOM */
+	
+	#section8 .row {
+    	margin-right: 8px !important;
+   		margin-left: 8px !important;
+	}
+	
+	#section11 .row {
+    	margin-right: 8px !important;
+   		margin-left: 8px !important;
+	}
+	
+	.navigation-box {
+		display:none !important;
+	}
+	
+	#section0 h1 {
+		font-size: 34px !important;
+	}
+	
+    #slogan {
+        font-size: 34px !important;
+    }
+	
+	#section0 button {
+		margin-top:0 !important;
+	}
+	
+	#section3 {
+		background: url(../images/vodafone-secondary-mobile.jpg);
+		background-size: cover;
+	} 
+	#section4 {
+		background: url(../images/dixons-secondary-mobile.jpg);
+		background-size: cover;
+	} 
+	#section5 {
+		background: url(../images/rentokil-secondary-mobile.jpg);
+		background-size: cover;
+	} 
+	
+	.learn-more-icon {
+		transform: scale(0.5);
+		margin: 0;
+	}
+	.text-body {
+		width: 100% !important;
+	}
+	
+	.steve-image {
+		display: none;
+		left:0;
+		height:400px;
+		width:auto;
+		opacity:0.3;
+		z-index: -1;
+	}  
+	
+	#section2 .text-body {
+		display:none;
+	}
+	
+	.client-secondary-image {
+		display: none;
+	}   
+	
+	.quote-box {
+		position: absolute;
+		z-index: 1;
+		width:80%;
+		top: 80px;
+	}   
+	
+	.quote-box h2 {
+		font-size: 23px !important;
+		color: #222;
+		text-shadow: 0 0 20px #fff;
+	}   
+	
+	.quote-box i {
+		transform: scale(0.8);
+	}
+	
+	#section3 .text-body {
+		display:none;
+	}
+	
+	#section4 .text-body {
+		display:none;
+	}
+	
+	.jon-image {
+    	right: -60px;
+		height: 40%;
+    	width: auto;
+		pointer-events: none;
+	}
+	
+	.rhys-image {
+    	left: 230px;
+		height: 24%;
+    	width: auto;
+		pointer-events: none;
+	}
+	
+	.rentokil-image {
+    	right: -100px;
+		height: 40%;
+    	width: auto;
+		pointer-events: none;
+	}
+	
+	.client-body {
+		padding:50px !important;
+		box-sizing: border-box;
+		position: absolute !important;
+    	top: 43px;
+	}
+	
+	.large-icon {
+		margin: 18px;
+		height: 70px;
+	}
+
+	#section8 h1 {
+		margin-bottom: 20px;
+	}
+	
+	.content-title {
+		font-size: 27px !important;
+	}
+	
+	.content-subtitle {
+		display: none;
+	}
+
+	.screen-images {
+		height: 150px;
+	}
+	
+	.menu-icon {
+	display: inline-block;
+	margin-right: 0;
+	}
+	
+	.navbar-header {
+	float:left;
+	}
+	
+	#screen-image {
+	top: -10%;
+	}
+	
+	#phone-image {
+    top: 10%;
+	}
+	
+	#tablet-image {
+    top: 0%;
+	}
+	
+	.popup {
+	position: absolute;
+	top:0;
+	bottom:0;
+	width:100%;
+	}
+	
+	button {
+		margin: 0;
+	}
+	
+	.platform-title {
+		padding: 0 10px;
+	}
+	
+	.platform-text {
+		padding: 0 15px;
+	}
+	
+	.carousel-content p {
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis; 
+	}
+	
+	.mobile-hidden {
+		display: none;
+	}
+}
+/*
+@media (orientation: landscape) {
+	.loader {
+		display: block !important;
+	}
+} */
+
